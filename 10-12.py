@@ -20,12 +20,17 @@ class TV:
         if self.MIN_CHANNEL <= c <= self.MAX_CHANNEL:
             self._channel = c
 
+        else :
+          print("채널 오류")
+
     def get_channel(self):
         return self._channel
 
     def set_volume(self, v):
         if self.MIN_VOLUME <= v <= self.MAX_VOLUME:
             self._volume = v
+        else :
+          print("볼륨 오류")
 
     def get_volume(self):
         return self._volume
@@ -33,18 +38,27 @@ class TV:
     def volume_up(self):
         if self._volume < self.MAX_VOLUME:
             self._volume += 1
+        else :
+            self._volume = self.MAX_VOLUME
 
     def volume_down(self):
         if self._volume > self.MIN_VOLUME:
             self._volume -= 1
 
+        else :
+            self._volume = self.MIN_VOLUME
+
     def channel_up(self):
         if self._channel < self.MAX_CHANNEL:
             self._channel += 1
+        else :
+            self._channel = self.MAX_CHANNEL
 
     def channel_down(self):
         if self._channel > self.MIN_CHANNEL:
             self._channel -= 1
+        else :
+            self._channel = self.MIN_CHANNEL
 
 
 
