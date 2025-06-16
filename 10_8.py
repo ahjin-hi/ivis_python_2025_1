@@ -11,7 +11,7 @@ class Counter:
     def inc(self):
         self.__number += 1
         if self.__number >= 100:
-            self.__number = 100
+            self.__number = 0
 
     def dec(self):
         self.__number -= 1
